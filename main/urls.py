@@ -19,7 +19,7 @@ from django.urls import path
 from phones.views import show_catalog, show_product
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('catalog/', show_catalog),
-    path('catalog/<slug:slug>/', show_product),
+    path('admin/', admin.site.urls, ),
+    path('catalog/', show_catalog, name='catalog'),
+    path('catalog/<slug:slug>/', show_product, name='phone'),
 ]
